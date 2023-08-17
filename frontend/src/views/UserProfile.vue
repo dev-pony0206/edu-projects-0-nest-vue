@@ -58,7 +58,7 @@ export default {
          `${server.baseURL}/customer/update?customerID=${this.id}`,
          customerData
        )
-       .then(data => {
+       .then(() => {
          router.push({ name: "home" });
        });
    },
