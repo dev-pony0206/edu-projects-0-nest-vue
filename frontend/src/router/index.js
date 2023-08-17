@@ -1,38 +1,29 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "@/views/HomeView.vue";
 
 const routes = [
   {
     meta: {
-      title: "Dashboard",
-    },
-    path: "/dashboard",
-    name: "dashboard",
-    component: Home,
-  },
-  {
-    meta: {
-      title: "List",
+      title: "Product-List",
     },
     path: "/list",
     name: "list",
-    component: () => import("@/views/ProductList.vue"),
+    component: () => import("@/components/views/ProductList.vue"),
   },
   {
     meta: {
-      title: "SingUp",
+      title: "Sing Up",
     },
     path: "/signup",
     name: "signup",
-    component: () => import("@/views/UserSignup.vue"),
+    component: () => import("@/components/views/UserSignup.vue"),
   },
   {
     meta: {
       title: "Login",
     },
-    path: "/login",
+    path: "/",
     name: "login",
-    component: () => import("@/views/UserLogin.vue"),
+    component: () => import("@/components/views/UserLogin.vue"),
   },
   {
     meta: {
@@ -40,7 +31,7 @@ const routes = [
     },
     path: "/profile",
     name: "profile",
-    component: () => import("@/views/UserProfile.vue"),
+    component: () => import("@/components/views/UserProfile.vue"),
   },
   {
     meta: {
@@ -48,12 +39,12 @@ const routes = [
     },
     path: "/error",
     name: "error",
-    component: () => import("@/views/ErrorView.vue"),
+    component: () => import("@/components/views/ErrorView.vue"),
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory('#'),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return savedPosition || { top: 0 };

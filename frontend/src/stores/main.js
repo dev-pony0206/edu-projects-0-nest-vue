@@ -29,29 +29,30 @@ export const useMainStore = defineStore("main", {
       }
     },
 
-    fetch(profile) {
+    fetch(info) {
       axios
         .get("")
         .then((res) => {
           if (res.data && res.data.data) {
-            this[profile] = r.data.data;
+            this[info] = res.data.data;
           }
         })
         .catch((error) => {
           alert(error.message);
         });
     },
-    fetch(productList) {
-      axios
-        .get("")
-        .then((res) => {
-          if (res.data && res.data.data) {
-            this[productList] = r.data.data;
-          }
-        })
-        .catch((error) => {
-          alert(error.message);
-        });
-    },
+    // fetchCustomers() {
+    //   axios
+    //     .get(`${server.baseURL}/customer/customers`)
+    //     .then(data => (this.customers = data.data));
+    // },
+    // deleteCustomer(id) {
+    //   axios
+    //     .delete(`${server.baseURL}/customer/delete?customerID=${id}`)
+    //     .then(data => {
+    //       console.log(data);
+    //       window.location.reload();
+    //     });
+    // }
   },
 });
