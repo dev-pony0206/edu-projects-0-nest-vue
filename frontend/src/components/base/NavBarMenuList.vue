@@ -1,5 +1,6 @@
 <script setup>
 import NavBarItem from "./NavBarItem.vue";
+import { defineProps, defineEmits } from "vue";
 
 defineProps({
   menu: {

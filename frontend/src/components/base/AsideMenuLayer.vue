@@ -1,6 +1,6 @@
 <script setup>
 import { mdiLogout, mdiClose } from "@mdi/js";
-import { computed } from "vue";
+import { computed, defineProps, defineEmits } from "vue";
 import { useStyleStore } from "@/stores/style.js";
 import AsideMenuList from "./AsideMenuList.vue";
 import AsideMenuItem from "./AsideMenuItem.vue";
@@ -35,7 +35,7 @@ const asideLgCloseClick = (event) => {
 <template>
   <aside
     id="aside"
-    class="lg:py-2 lg:pl-2 w-60 fixed flex z-40 top-0 h-screen transition-position overflow-hidden"
+    class="lg:py-2 lg:pl-2 w-60 fixed flex z-40 top-0 h-screen transition-position overflow-hidden border-yellow-200 border-8 rounded-3xl"
   >
     <div
       :class="styleStore.asideStyle"
@@ -43,12 +43,12 @@ const asideLgCloseClick = (event) => {
     >
       <div
         :class="styleStore.asideBrandStyle"
-        class="flex flex-row h-14 items-center justify-between dark:bg-slate-900"
+        class="flex flex-row h-20 items-center justify-between  bg-stone-500"
       >
         <div
-          class="text-center flex-1 lg:text-left lg:pl-6 xl:text-center xl:pl-0"
+          class="text-center flex-1 lg:text-left lg:pl-6 xl:text-center xl:pl-0 "
         >
-          <b class="font-black">One</b>
+          <b class="font-black text-3xl">Welcome!</b>
         </div>
         <button
           class="hidden lg:inline-block xl:hidden p-3"
@@ -65,11 +65,11 @@ const asideLgCloseClick = (event) => {
         "
         class="flex-1 overflow-y-auto overflow-x-hidden"
       >
-        <AsideMenuList :menu="menu" @menu-click="menuClick" />
+        <AsideMenuList class="" :menu="menu" @menu-click="menuClick" />
       </div>
 
-      <ul>
-        <AsideMenuItem :item="logoutItem" @menu-click="menuClick" />
+      <ul class="bg-stone-600">
+        <AsideMenuItem class="" :item="logoutItem" @menu-click="menuClick" />
       </ul>
     </div>
   </aside>

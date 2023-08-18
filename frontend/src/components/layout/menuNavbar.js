@@ -34,7 +34,7 @@ export default [
     icon: mdiGithub,
     label: "GitHub",
     isDesktopNoLabel: true,
-    href: "https://github.com/ChristoperCarter0206/edu-products-0-nest-vue",
+    href: "https://github.com/ChristoperCarter0206/edu-projects-0-nest-vue",
     target: "_blank",
   },
   {

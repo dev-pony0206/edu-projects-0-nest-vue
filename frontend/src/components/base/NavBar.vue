@@ -1,7 +1,8 @@
 <script setup>
-import { ref } from "vue";
+import { ref, defineProps, defineEmits } from "vue";
 import { mdiClose, mdiDotsVertical } from "@mdi/js";
 import { containerMaxW } from "@/config.js";
+import BaseIcon from "@/components/base/BaseIcon.vue";
 import NavBarMenuList from "./NavBarMenuList.vue";
 import NavBarItemPlain from "./NavBarItemPlain.vue";
 

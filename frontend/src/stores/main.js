@@ -1,25 +1,22 @@
 import { defineStore } from "pinia";
+import router from '../router';
 import axios from "axios";
 
 export const useMainStore = defineStore("main", {
   state: () => ({
     /* User */
-    userFirstName: null,
-    userLastName:null,
+    userName:null,
     userEmail: null,
     userAvatar: null,
 
-    /* Field focus with ctrl+k (to register only once) */
-    isFieldFocusRegistered: false,
+    // /* Field focus with ctrl+k (to register only once) */
+    // isFieldFocusRegistered: false,
 
   }),
   actions: {
     setUser(payload) {
-      if (payload.firstName) {
-        this.userFirstName = payload.firstName;
-      }
-      if (payload.lastName) {
-        this.userLastName = payload.lastName;
+      if (payload.name) {
+        this.userName = payload.name;
       }
       if (payload.email) {
         this.userEmail = payload.email;
@@ -31,7 +28,7 @@ export const useMainStore = defineStore("main", {
 
     fetch(info) {
       axios
-        .get("")
+        .get("",)
         .then((res) => {
           if (res.data && res.data.data) {
             this[info] = res.data.data;
@@ -46,13 +43,18 @@ export const useMainStore = defineStore("main", {
     //     .get(`${server.baseURL}/customer/customers`)
     //     .then(data => (this.customers = data.data));
     // },
-    // deleteCustomer(id) {
-    //   axios
-    //     .delete(`${server.baseURL}/customer/delete?customerID=${id}`)
-    //     .then(data => {
-    //       console.log(data);
-    //       window.location.reload();
-    //     });
-    // }
+    deleteUser(id) {
+      axios
+        .delete("",id)
+        .then(res => {
+          console.log(res);
+          window.location.reload();
+        });
+    },
+    logout() {
+      this.user = null;
+      localStorage.removeItem('user');
+      router.push('/login');
+  }
   },
 });

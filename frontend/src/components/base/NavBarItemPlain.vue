@@ -1,4 +1,5 @@
 <script setup>
+import { defineProps } from "vue";
 import { useStyleStore } from "@/stores/style";
 
 defineProps({

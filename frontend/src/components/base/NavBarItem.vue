@@ -1,10 +1,10 @@
 <script setup>
 import { mdiChevronUp, mdiChevronDown } from "@mdi/js";
 import { RouterLink } from "vue-router";
-import { computed, ref, onMounted, onBeforeUnmount } from "vue";
+import { computed, ref, onMounted, onBeforeUnmount, defineProps, defineEmits } from "vue";
 import { useStyleStore } from "@/stores/style.js";
 import { useMainStore } from "@/stores/main.js";
-import UserAvatarCurrentUser from "./UserAvatarCurrentUser.vue";
+import BaseIcon from "@/components/base/BaseIcon.vue";
 import NavBarMenuList from "./NavBarMenuList.vue";
 import BaseDivider from "./BaseDivider.vue";
 

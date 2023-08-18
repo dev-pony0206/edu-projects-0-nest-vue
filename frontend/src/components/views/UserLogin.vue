@@ -1,25 +1,24 @@
 <template>
-  <div class="auth-layout-wrap flex justify-center min-h-screen flex-col bg-cover items-center" style="background-image: url(../../assets/images/photo-wide-4.jpg)">
-        <div class="container-session-v1 max-w-2xl">
-            <BaseCard noPadding class="overflow-hidden">
-              <div class="grid grid-cols-12">
+  <div class="auth-layout-wrap flex justify-center min-h-screen flex-col bg-cover items-center" style='background-image: url("photo-wide-3.jpg")'>
+    <h1 class="text-indigo-900 text-9xl font-display py-10 ">Product Management System</h1>
+    <div class="container-session-v1 max-w-2xl">
+              <div class="grid grid-cols-12 ">
                   <div class="col-span-12 lg:col-span-6">
-                      <div class="p-5">
+                      <div class="p-3 justify-center items-center bg-white">
                       <img class="w-48" src="../../assets/images/sq-17.jpg"/>                       
-                         <h1 class="mb-3 text-lg">Sign In </h1>
+                         <h1 class="mb-3 text-5xl">Sign In </h1>
                           <form action="">
                               <div class="mb-3">
-                                  <label class="text-xs text-gray-600" for="">Email Address</label>
-                                  <input class="w-full px-4 py-1 bg-gray-100 focus:outline-none border border-gray-400 rounded-full" value="ui-lib@gmail.com" type="email" placeholder="">
+                                  <label class="text-xs text-gray-600" for="" >Email Address</label>
+                                  <input class="w-full px-4 py-1 bg-gray-100 focus:outline-none border border-gray-400 rounded-full" value="" type="email" placeholder="Enter your Email Address">
                               </div>
                               <div class="mb-3">
                                   <label class="text-xs text-gray-600" for="">Password</label>
-                                  <input class="w-full px-4 py-1 bg-gray-100 focus:outline-none border border-gray-400 rounded-full" value="askjhdgahsgd" type="password" placeholder="">
+                                  <input class="w-full px-4 py-1 bg-gray-100 focus:outline-none border border-gray-400 rounded-full" value="" type="password" placeholder="Type your Password">
                               </div>
                               <div class="mb-4">
-      
-                                  <BaseBtn block class="bg-purple-500 mb-2 text-white  rounded-full">Sign In</BaseBtn>
-                                  <BaseBtn block class="bg-purple-500 mb-2 text-white  rounded-full">Create an account</BaseBtn>
+                                  <input type="button"  class="bg-purple-600  flex items-center justify-center mb-2 hover:bg-indigo-500 text-white w-full font-normal leading-8 rounded-full" @click.prevent="signin" value="Sign in"/>
+                                  <input type="button"  class="bg-purple-600 mb-2 text-white  flex items-center justify-center font-normal hover:bg-indigo-500 leading-8 w-full rounded-full"  @click.prevent="createacount" value="Create an account"/>
                               </div>
                               <div class="text-center">
                                 <a class="hover:text-purple-500 underline text-gray-600" href="#">Forgot Password?</a>
@@ -27,25 +26,28 @@
                           </form>
                       </div>
                   </div>
-                  <div class="col-span-12 bg-cover lg:col-span-6" style="background-image: url(../../assets/images/photo-long-3.jpg)">
+                  <div class="col-span-12 bg-cover lg:col-span-6" style="background-image: url(photo-long-3.jpg)">
                       <div class="flex justify-center items-center flex-col h-full px-4 py-2">
-                          <BaseBtn block rounded class="mb-3 border border-purple-500 bg-gray-100 text-purple-500 hover:bg-purple-500 hover:text-white">
-                            <i class="i-Mail-with-At-Sign align-middle mr-2"></i>Sign Up with Email
-                          </BaseBtn>
-                          <BaseBtn block rounded class=" mb-3 border border-red-500 bg-gray-100 text-red-500 hover:bg-red-500 hover:text-white">
-                            <i class="i-Google-Plus align-middle mr-2"></i>Sign Up with Google
-                          </BaseBtn>
-                          <BaseBtn block rounded class="border border-indigo-500 bg-gray-100 text-indigo-500 hover:bg-indigo-500 hover:text-white">
-                            <i class="i-Facebook-2 align-middle mr-2"></i>Sign Up with facebook
-                          </BaseBtn>
-                          
-                          
-                          
+                          <input type="button"   class="mb-3 border border-purple-500 w-full rounded-full font-normal leading-10 flex items-center justify-center bg-gray-100 text-purple-500 hover:bg-purple-500 hover:text-white" value="Sign Up with Email"/>
+                          <input type="button"   class=" mb-3 border border-red-500 w-full bg-gray-100 rounded-full font-normal leading-10 flex items-center justify-center text-red-500 hover:bg-red-500 hover:text-white" value="Sign Up with Google"/>
+                          <input type="button"   class="border  border-indigo-500 bg-gray-100 w-full flex font-normal leading-10 items-center justify-center rounded-full text-indigo-500 hover:bg-indigo-500 hover:text-white" value="Sign Up with Facebook"/>
                       </div>
                   </div>
-              </div>
-            </BaseCard>
-            
+              </div>            
         </div>
     </div>
 </template>
+
+<script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const createacount = () => {
+  router.push('/signup')
+} ;
+
+const signin = () => {
+  router.push('/list')
+}
+</script>

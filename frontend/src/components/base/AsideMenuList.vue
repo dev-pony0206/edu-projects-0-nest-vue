@@ -1,5 +1,6 @@
 <script setup>
 import AsideMenuItem from "./AsideMenuItem.vue";
+import { defineProps, defineEmits } from "vue";
 
 defineProps({
   isDropdownList: Boolean,
@@ -17,7 +18,7 @@ const menuClick = (event, item) => {
 </script>
 
 <template>
-  <ul>
+  <ul class="flex flex-col mt-8">
     <AsideMenuItem
       v-for="(item, index) in menu"
       :key="index"

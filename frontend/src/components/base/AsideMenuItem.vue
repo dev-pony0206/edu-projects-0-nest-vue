@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, defineProps, defineEmits } from "vue";
 import { RouterLink } from "vue-router";
 import { useStyleStore } from "@/stores/style.js";
 import { mdiMinus, mdiPlus } from "@mdi/js";
@@ -37,7 +37,7 @@ const menuClick = (event) => {
 </script>
 
 <template>
-  <li>
+  <li class="text-center text-2xl my-6">
     <component
       :is="item.to ? RouterLink : 'a'"
       v-slot="vSlot"

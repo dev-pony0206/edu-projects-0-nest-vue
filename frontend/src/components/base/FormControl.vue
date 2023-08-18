@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onMounted, onBeforeUnmount } from "vue";
+import { computed, ref, onMounted, onBeforeUnmount, defineProps, defineEmits } from "vue";
 import { useMainStore } from "@/stores/main";
 
 const props = defineProps({
@@ -76,9 +76,9 @@ const inputElClass = computed(() => {
 
 const computedType = computed(() => (props.options ? "select" : props.type));
 
-const controlIconH = computed(() =>
-  props.type === "textarea" ? "h-full" : "h-12"
-);
+// const controlIconH = computed(() =>
+//   props.type === "textarea" ? "h-full" : "h-12"
+// );
 
 const mainStore = useMainStore();
 

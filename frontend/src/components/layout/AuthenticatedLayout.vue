@@ -1,9 +1,12 @@
-<script setup>import { ref } from "vue";
+<script setup>
+import { ref } from "vue";
+import { mdiForwardburger, mdiBackburger, mdiMenu } from "@mdi/js";
 import { useRouter } from "vue-router";
 import menuAside from "./menuAside.js";
-import menuNavBar from "./menuNavBar.js";
+import menuNavBar from "./menuNavbar.js";
 import { useMainStore } from "@/stores/main.js";
 import { useStyleStore } from "@/stores/style.js";
+import BaseIcon from "@/components/base/BaseIcon.vue";
 import FormControl from "@/components/base/FormControl.vue";
 import NavBar from "@/components/base/NavBar.vue";
 import NavBarItemPlain from "@/components/base/NavBarItemPlain.vue"; 
@@ -61,6 +64,21 @@ const menuClick = (event, item) => {
         ]"
         @menu-click="menuClick"
       >
+      <NavBarItemPlain
+          display="flex lg:hidden"
+          @click.prevent="isAsideMobileExpanded = !isAsideMobileExpanded"
+        >
+          <BaseIcon
+            :path="isAsideMobileExpanded ? mdiBackburger : mdiForwardburger"
+            size="24"
+          />
+        </NavBarItemPlain>
+        <NavBarItemPlain
+          display="hidden lg:flex xl:hidden"
+          @click.prevent="isAsideLgActive = true"
+        >
+          <BaseIcon :path="mdiMenu" size="24" />
+        </NavBarItemPlain>
         <NavBarItemPlain use-margin>
           <FormControl
             placeholder="Search (ctrl+k)"

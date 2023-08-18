@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 const routes = [
   {
     meta: {
-      title: "Product-List",
+      title: "ProductList",
     },
     path: "/list",
     name: "list",
@@ -39,7 +39,7 @@ const routes = [
     },
     path: "/error",
     name: "error",
-    component: () => import("@/components/views/ErrorView.vue"),
+    component: () => import("@/components/base/ProductCard.vue"),
   },
 ];
 
