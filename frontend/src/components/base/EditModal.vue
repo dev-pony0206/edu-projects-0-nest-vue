@@ -11,7 +11,7 @@
         </div>
       </header>
       <!-- Modal Body -->
-      <section id="modal-body" class="px-4 py-6">
+      <section id="modal-body" class="px-4 py-6 text-sm">
         <slot name="body"></slot>
       </section>
       <!-- Modal Footer -->
