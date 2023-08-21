@@ -41,6 +41,14 @@ const routes = [
     name: "error",
     component: () => import("@/components/base/ProductCard.vue"),
   },
+  {
+    meta: {
+      title: "New",
+    },
+    path: "/new",
+    name: "new",
+    component: () => import("@/components/views/NewProduct.vue"),
+  },
 ];
 
 const router = createRouter({

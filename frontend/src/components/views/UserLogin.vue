@@ -1,11 +1,12 @@
 <template>
-  <div class="auth-layout-wrap flex justify-center min-h-screen flex-col bg-cover items-center" style='background-image: url("photo-wide-3.jpg")'>
+  <div class="auth-layout-wrap flex justify-center min-h-screen flex-col bg-cover items-center" style='background-image: url("33.jpg")'>
     <h1 class="text-indigo-900 text-9xl font-display py-10 ">Product Management System</h1>
+    <h1 class="text-yellow-400 text-5xl font-display py-3 ">Working With Our Products </h1>
     <div class="container-session-v1 max-w-2xl">
-              <div class="grid grid-cols-12 ">
+              <div class="grid grid-cols-12">
                   <div class="col-span-12 lg:col-span-6">
-                      <div class="p-3 justify-center items-center bg-white">
-                      <img class="w-48" src="../../assets/images/sq-17.jpg"/>                       
+                      <div class="p-3  block text-center flex-col bg-white">
+                      <img class="w-24" src="download.jpg"/>                       
                          <h1 class="mb-3 text-5xl">Sign In </h1>
                           <form action="">
                               <div class="mb-3">
@@ -21,12 +22,12 @@
                                   <input type="button"  class="bg-purple-600 mb-2 text-white  flex items-center justify-center font-normal hover:bg-indigo-500 leading-8 w-full rounded-full"  @click.prevent="createacount" value="Create an account"/>
                               </div>
                               <div class="text-center">
-                                <a class="hover:text-purple-500 underline text-gray-600" href="#">Forgot Password?</a>
+                                <a class="hover:text-purple-500 underline text-gray-600" href="">Forgot Password?</a>
                               </div>
                           </form>
                       </div>
                   </div>
-                  <div class="col-span-12 bg-cover lg:col-span-6" style="background-image: url(photo-long-3.jpg)">
+                  <div class="col-span-12 bg-cover lg:col-span-6" style='background-image: url("new.jpg")'>
                       <div class="flex justify-center items-center flex-col h-full px-4 py-2">
                           <input type="button"   class="mb-3 border border-purple-500 w-full rounded-full font-normal leading-10 flex items-center justify-center bg-gray-100 text-purple-500 hover:bg-purple-500 hover:text-white" value="Sign Up with Email"/>
                           <input type="button"   class=" mb-3 border border-red-500 w-full bg-gray-100 rounded-full font-normal leading-10 flex items-center justify-center text-red-500 hover:bg-red-500 hover:text-white" value="Sign Up with Google"/>

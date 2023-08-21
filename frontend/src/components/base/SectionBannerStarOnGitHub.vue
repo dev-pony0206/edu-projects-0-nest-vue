@@ -2,6 +2,7 @@
 import { mdiGithub } from "@mdi/js";
 import SectionBanner from "@/components/base/SectionBanner.vue";
 import { gradientBgPinkRed } from "@/colors/index";
+
 </script>
 
 <template>
@@ -10,11 +11,11 @@ import { gradientBgPinkRed } from "@/colors/index";
       Like the project? Please star on <b>GitHub</b> ;-)
     </h1>
     <div>
-      <input type="button"
-        value="GitHub"
+      <a 
         :icon=mdiGithub
-        class="rounded-full"
-      />
+        class="rounded-full bg-white text-orange-500 text-1xl p-2"
+        href= "https://github.com/ChristoperCarter0206/edu-projects-0-nest-vue"
+      >Github</a>
     </div>
   </SectionBanner>
 </template>

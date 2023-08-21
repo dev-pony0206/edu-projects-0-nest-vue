@@ -27,14 +27,15 @@ import SectionBannerStarOnGitHub from "@/components/base/SectionBannerStarOnGitH
       <!-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
   
     </div> -->
-        <div class="flex flex-col justify-between">
+        <!-- <div class="flex flex-col justify-between">
           <ProductCard
             v-for="client in clientBarItems"
             :key="client.id"
             
             
           />
-        </div>
+        </div> -->
+        <ProductCard/>
       <!-- </div> -->
       <SectionBannerStarOnGitHub class="mt-6 mb-6" />
     </SectionMain>

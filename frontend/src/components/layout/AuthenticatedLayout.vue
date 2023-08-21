@@ -96,7 +96,7 @@ const menuClick = (event, item) => {
         @aside-lg-close-click="isAsideLgActive = false"
       />
       <slot />
-      <FooterBar>
+      <FooterBar class=" fixed bottom-1">
         Get more with
         <a
           href="https://vuejs.org/guide/introduction.html"

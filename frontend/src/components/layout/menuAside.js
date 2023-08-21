@@ -1,30 +1,19 @@
-import {
-  mdiAccountCircle,
-  mdiMonitor,
-  mdiGithub,
-  mdiLock
-} from "@mdi/js";
-
 export default [
   {
-    to: "/dashboard",
-    icon: mdiMonitor,
-    label: "Dashboard",
+    to: "/new",
+    label: "New",
   },
   {
     to: "/profile",
     label: "Profile",
-    icon: mdiAccountCircle,
   },
   {
-    to: "/login",
+    to: "/",
     label: "Login",
-    icon: mdiLock,
   },
   {
     href: "https://github.com/ChristoperCarter0206/edu-projects-0-nest-vue",
     label: "GitHub",
-    icon: mdiGithub,
     target: "_blank",
   }
 ];
