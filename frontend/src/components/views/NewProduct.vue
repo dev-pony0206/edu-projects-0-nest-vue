@@ -9,8 +9,10 @@
     >
      Start with Us
       <input class="font-display text-2xl rounded-xl bg-white w-72" type="file" @change="showImagePreview($event)" accept="image/*" />
-    
-    </div>
+      <!-- <button type="button" class="rounded-2xl bg-purple-800 shadow-md p-3 my-1 ml-20  text-white text-2xl" @click.prevent="backNew">
+       Back
+      </button>   -->
+      </div>
     <div
       class="p-5 bg-stone-500 rounded-2xl mx-96 flex items-center "
       v-if="imageFile != null && imageFile.length != 0"
@@ -49,6 +51,7 @@
 </template>
 
 <script>
+
 export default {
   name: "ImageUploader",
   data() {

@@ -1,28 +1,15 @@
 <template>
-  <div
-    id="modal-backdrop"
-    class="fixed inset-0 bg-opacity-30 bg-purple-900 flex justify-center items-center"
-  >
-    <div
-      id="modal"
-      class="bg-purple-300 rounded-3xl overflow-x-auto flex flex-col justify-between w-2/6 h-4/6"
-    >
+  <div id="modal-backdrop" class="fixed inset-0 bg-opacity-30 bg-purple-900 flex justify-center items-center">
+    <div id="modal" class="bg-purple-300 rounded-3xl overflow-x-auto flex flex-col justify-between w-2/6 h-4/6">
       <!-- Modal Header -->
-      <header
-    id="modal-header"
-    class="px-4 py-6 flex justify-between items-center border-b-2 border-white"
->
-  <slot name="header">Dummy header</slot>
-  <div>
-  <button
-      type="button"
-      class="w-9 p-2 bg-gray-300 rounded-full"
-      @click="closeModal"
-  >
-      <img src="close1.png" alt="close button" />
-  </button>
-  </div>
-</header>
+      <header id="modal-header" class="px-4 py-6 flex justify-between items-center border-b-2 border-white">
+        <slot name="header">Dummy header</slot>
+        <div>
+          <button type="button" class="w-9 p-2 bg-gray-300 rounded-full" @click="closeModal">
+            <img src="close1.png" alt="close button" />
+          </button>
+        </div>
+      </header>
       <!-- Modal Body -->
       <section id="modal-body" class="px-4 py-6">
         <slot name="body"></slot>
@@ -36,6 +23,20 @@
 </template>
 
 <script>
+//   import { defineProps, computed } from "vue";
+
+// const props = defineProps({
+// product: {
+//   type: Object,
+//   required: true,
+// },
+// });
+
+// const product = computed((props) => {
+//    editProduct = props.product;
+//    return editProduct;
+// });
+
 export default {
   name: "EditModal",
   methods: {

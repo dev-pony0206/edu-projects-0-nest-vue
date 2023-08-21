@@ -51,7 +51,7 @@ export default {
           <div class="h-1/2 flex justify-center items-center">
             <input type="button" class="w-20 p-1 bg-sky-700 rounded-full" value="Edit" @click.prevent="showModal"/>
             <EditModal v-show="isModalVisible" @closeModal="closeModal">
-                 <!-- header -->
+                 header
                 <template v-slot:header>
                   <h1 class="font-bold text-2xl  text-purple-900">Edit Product</h1>
                 </template>
